@@ -560,19 +560,42 @@ a:active {
 	outline: 0;
 }
 
+.post-it-button{
+	position: relative;
+	top:-3rem;
+	left:15rem;
+	padding: 0.2rem 0.6rem;
+	font-size: 0.8rem;
+	background-color: #67D6DA;
+	border: 2px solid black;
+	box-shadow: 3px 3px 10px #404040;
+}
+
+.post-it-button:hover{
+	transition: 0.1s;
+	box-shadow: 6px 6px 10px #404040;
+	background-color: #87e2d6;
+}
+
+.post-it-button:active{
+	box-shadow: none;
+	border-color: #808080;
+	background-color: #b6ede1;
+}
+
+
+
 /* Forms
 --------------------------------------------- */
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	background-color: #67D6DA;
+	border: 2px solid black;
+	box-shadow: 3px 3px 10px #404040;
 }
 
 button:hover,
@@ -647,7 +670,8 @@ textarea {
 --------------------------------------------------------------*/
 
 .site-info{
-		background-color: #707070;
+		background-color: #fff;
+		padding: 2rem;
 }
 
 .front-page-title{
@@ -996,10 +1020,11 @@ textarea {
 }
 
 .post-it{
-	margin: auto;
+	box-sizing: border-box;
+	margin: 2rem;
 	background-color: #FFFFD3;
-	max-width: 20rem;
-	max-height: 20rem;
+	width: 20rem;
+	height: 20rem;
 	padding: 2rem;
 	box-shadow: 6px 6px 10px #404040;
 }
@@ -1022,6 +1047,12 @@ textarea {
 	transform: rotate(8deg);
 }
 
-.post-it-button{
-	background-color: red;
+a.wp-block-button__link{
+	background-color: transparent!important;
+	color: #000!important;
+	font-size: 1rem!important;
+}
+
+a.wp-block-button__link:active{
+		color: #808080!important;
 }
