@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Utilities
 	- Accessibility
 	- Alignments
+	- Custom Divs
 
 --------------------------------------------------------------*/
 
@@ -560,30 +561,6 @@ a:active {
 	outline: 0;
 }
 
-.post-it-button{
-	position: relative;
-	top:-3rem;
-	left:15rem;
-	padding: 0.2rem 0.6rem;
-	font-size: 0.8rem;
-	background-color: #67D6DA;
-	border: 2px solid black;
-	box-shadow: 3px 3px 10px #404040;
-}
-
-.post-it-button:hover{
-	transition: 0.1s;
-	box-shadow: 6px 6px 10px #404040;
-	background-color: #87e2d6;
-}
-
-.post-it-button:active{
-	box-shadow: none;
-	border-color: #808080;
-	background-color: #b6ede1;
-}
-
-
 
 /* Forms
 --------------------------------------------- */
@@ -591,11 +568,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 1rem 2rem;
-	font-size: 2rem;
-	background-color: #67D6DA;
-	border: 2px solid black;
-	box-shadow: 3px 3px 10px #404040;
+	font-size: 1rem;
 }
 
 button:hover,
@@ -674,8 +647,19 @@ textarea {
 		padding: 2rem;
 }
 
+.entry-title{
+	display: inline block;
+	max-width: 20rem;
+	margin: 4rem auto;
+	padding: 1rem 2rem;
+	font-size: 2rem;
+	background-color: #67D6DA;
+	border: 2px solid black;
+	box-shadow: 3px 3px 10px #404040;
+}
+
 .front-page-title{
-	font-size: 4rem;
+	font-size: 5rem;
 }
 
 /*--------------------------------------------------------------
@@ -778,6 +762,10 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+.nav-menu a {
+	font-size: 1.2rem;
 }
 
 /* Posts and pages
@@ -1021,38 +1009,172 @@ textarea {
 
 .post-it{
 	box-sizing: border-box;
-	margin: 2rem;
 	background-color: #FFFFD3;
-	width: 20rem;
-	height: 20rem;
+	max-width: 22rem;
+	min-width: 21rem;
+	max-height: 22rem;
 	padding: 2rem;
+
+	margin: 1rem!important;
 	box-shadow: 6px 6px 10px #404040;
+	transform: rotate(2deg);
 }
 
-.post-it-wide{
+.post-it:hover,.post-it:nth-child(2n):hover{
+	transform: rotate(0deg);
+	transform: scale(1.1);
+	box-shadow: 6px 6px 15px #858585;
+	transition: .2s ease;
+}
+
+.post-it:active,.post-it:nth-child(2n):active{
+	transform: rotate(0deg) scale(1);
+	box-shadow: none;
+	transition: .2s ease;
+}
+
+.post-it .wp-block-group{
+	padding-bottom: 1rem;
+}
+
+.post-it:nth-child(2n){
+		transform: rotate(-1deg);
+}
+
+.paper{
+	z-index: 999;
 	margin: auto;
-	background-color: #FFFFD3;
-	max-width: 24rem;
-	min-height: 24rem;
+	max-width: 40rem;
 	padding: 2rem;
-	box-shadow: 6px 6px 10px #404040;
+}
+
+.paper h2{
+	font-size: 3rem;
+}
+
+.paper p {
+	font-size: 1.2rem;
+}
+
+/* Need to re-add this CSS to the blocks */
+
+.post-it .wp-block-image{
+	max-height: 8rem;
+	min-width: inherit;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.post-it img{
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	top: -2rem;
+}
+
+.post-it h3 {
+	font-size: 1.4rem;
+}
+
+.post-it p {
+	font-size: 0.8rem;
+}
+
+.hero-div{
+	justify-content: center;
 }
 
 .polaroid{
-	max-width: 18rem;
+	flex: 1;
+	display: inline-block;
+	max-width: 20rem;
 	border: 2rem solid #fff;
 	border-bottom: 4rem solid #fff;
 	box-shadow: 6px 6px 10px #404040;
-	margin: auto;
-	transform: rotate(8deg);
+	transform: rotate(5deg);
 }
 
-a.wp-block-button__link{
-	background-color: transparent!important;
-	color: #000!important;
-	font-size: 1rem!important;
+.wp-block-columns{
+	justify-content: space-around;
+	flex-wrap: wrap!important;
 }
 
-a.wp-block-button__link:active{
-		color: #808080!important;
+
+/* Media Queries
+--------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+	.paper{
+		max-width: 25rem;
+	}
+
+	.hero-div{
+		margin: 0;
+		justify-content: space-around;
+	}
+
+	.post-it{
+		min-width: 18rem;
+		min-height: 12rem;
+		padding: 2rem;
+	}
+
+	.post-it .wp-block-image{
+		max-height: 6rem;
+	}
+
+	.post-it h2{
+		font-size: 1.2rem;
+	}
+
+	.post-it p{
+		font-size: 1rem;
+	}
+
+}
+
+/* Phablet */
+@media (max-width: 768px) {
+
+	.hero-div{
+		flex-direction: column;
+	}
+
+	.post-it{
+		max-width: 60%;
+		min-height: 22rem;
+		margin: auto 0;
+		transform: rotate(0);
+		padding: 2rem;
+	}
+
+		.post-it:nth-child(2n){
+			transform: rotate(0);
+		}
+
+		.post-it .wp-block-image{
+			max-height: 8rem;
+		}
+
+	.wp-block-columns{
+		display: block;
+		justify-content: center;
+	}
+}
+
+/*  Mobile */
+@media (max-width: 576px) {
+
+	.post-it{
+		max-width: 80%;
+		min-height: 20rem;
+		margin: auto 0;
+		transform: rotate(0);
+	}
+
 }
