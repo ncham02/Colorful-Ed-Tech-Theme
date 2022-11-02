@@ -407,7 +407,6 @@ textarea {
 	font-family: "Galvji", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
-	text-align: center;
 }
 
 h1,
@@ -419,10 +418,6 @@ h6 {
 	clear: both;
 	font-weight: normal;
 	color: #000;
-}
-
-.blue-paper {
-	text-align: left;
 }
 
 p {
@@ -482,6 +477,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #FFCCD0;
+	text-align: center;
 }
 
 hr {
@@ -613,6 +609,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+	text-align: left;
 }
 
 input[type="text"]:focus,
@@ -740,6 +737,7 @@ button.menu-toggle{
 	margin: 2rem;
 }
 
+/* Hide menu on desktop and tablet. */
 @media screen and (min-width: 769px) {
 
 	.menu-toggle {
@@ -753,7 +751,6 @@ button.menu-toggle{
 	.main-navigation.toggled ul {
 		display: flex;
 	}
-
 }
 
 .site-main .comment-navigation,
@@ -821,6 +818,11 @@ button.menu-toggle{
 
 .bypostauthor {
 	display: block;
+}
+
+.comments-area {
+	text-align: left;
+	margin: 2rem;
 }
 
 /* Widgets
@@ -1015,6 +1017,12 @@ button.menu-toggle{
 }
 
 /* Custom Divs
+Add these CSS classes:
+blue-box: H2
+hero-div: Row
+polaroid: Image
+hero-text: Div
+post-it: Column
 --------------------------------------------- */
 
 .blue-box{
@@ -1024,6 +1032,35 @@ button.menu-toggle{
 	background-color: #67D6DA;
 	border: 2px solid black;
 	box-shadow: 3px 3px 10px #404040;
+}
+
+.hero-div{
+	justify-content: center;
+}
+
+.polaroid{
+	flex: 1;
+	display: inline-block;
+	max-width: 20rem;
+	border: 2rem solid #fff;
+	border-bottom: 4rem solid #fff;
+	box-shadow: 6px 6px 10px #404040;
+	transform: rotate(5deg);
+}
+
+.hero-text{
+	z-index: 999;
+	margin: auto;
+	max-width: 40rem;
+	padding: 2rem;
+}
+
+.hero-text h2{
+	font-size: 3rem;
+}
+
+.hero-text p {
+	font-size: 1.2rem;
 }
 
 .post-it{
@@ -1057,25 +1094,8 @@ button.menu-toggle{
 }
 
 .post-it:nth-child(2n){
-		transform: rotate(-1deg);
+	transform: rotate(-1deg);
 }
-
-.paper{
-	z-index: 999;
-	margin: auto;
-	max-width: 40rem;
-	padding: 2rem;
-}
-
-.paper h2{
-	font-size: 3rem;
-}
-
-.paper p {
-	font-size: 1.2rem;
-}
-
-/* Need to re-add this CSS to the blocks */
 
 .post-it .wp-block-image{
 	max-height: 8rem;
@@ -1102,20 +1122,6 @@ button.menu-toggle{
 	font-size: 0.8rem;
 }
 
-.hero-div{
-	justify-content: center;
-}
-
-.polaroid{
-	flex: 1;
-	display: inline-block;
-	max-width: 20rem;
-	border: 2rem solid #fff;
-	border-bottom: 4rem solid #fff;
-	box-shadow: 6px 6px 10px #404040;
-	transform: rotate(5deg);
-}
-
 .wp-block-columns{
 	justify-content: space-around;
 	flex-wrap: wrap!important;
@@ -1130,6 +1136,7 @@ button.menu-toggle{
 }
 
 .blue-paper{
+	text-align: left;
 	width: 90%;
 	background-color: #ADF9FC;
 	box-shadow: 6px 6px 10px #404040;
@@ -1144,7 +1151,7 @@ button.menu-toggle{
 /* Tablet */
 @media (max-width: 992px) {
 
-	.paper{
+	.hero-text{
 		max-width: 25rem;
 	}
 
