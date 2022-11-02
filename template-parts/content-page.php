@@ -21,7 +21,12 @@
 	</header><!-- .entry-header -->
 
 	<?php colorful_edtech_post_thumbnail(); ?>
-
+	<?php
+		if ( !is_front_page() ) :
+			?>
+<div class="cardboard-background">
+	<div class="blue-paper">
+	<?php	endif; ?>
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -34,7 +39,12 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
+	<?php
+		if ( !is_front_page() ) :
+			?>			
+		</div>
+</div>
+	<?php	endif; ?>
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
