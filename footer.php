@@ -19,10 +19,11 @@
 				printf( esc_html__( 'Proudly powered by %s', 'colorful_edtech' ), 'WordPress' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<br>
+			<br>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'colorful_edtech' ), 'colorful_edtech', '<a href="http://underscores.me/">Nia Hamilton</a>' );
+				printf( esc_html__( 'This theme, called %1$s was coded by me (Nia Hamilton!), with some help from %2$s!', 'colorful_edtech' ), 'colorful_edtech', '<a href="http://underscores.me/">Underscores</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

@@ -643,10 +643,27 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+footer{
+	color: #FFF;
+}
+
+footer a{
+	color: #67D6DA;
+}
+
+footer a:visited{
+	color: #52ABAE;
+}
+
+footer a:active,
+footer a:hover{
+	color: #ADF9FC;
+}
+
 .site-info{
-		background-color: #fff;
-		color: #000;
-		padding: 4rem;
+	margin-top: 2rem;
+	background-color: #404040;
+	padding: 4rem;
 }
 
 .entry-title{
@@ -790,8 +807,7 @@ button.menu-toggle{
 	display: block;
 }
 
-.post,
-.page {
+.post{
 	margin: 0 0 1.5em;
 }
 
