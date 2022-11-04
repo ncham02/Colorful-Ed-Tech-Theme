@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Nia Hamilton
 Author URI: http://underscores.me/
 Description: A colorful, blocky theme, using post-it notes and notebook paper as divs.
-Version: 1.0.1
+Version: 1.0.2
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1114,7 +1114,6 @@ post-it: Column
 
 .post-it .wp-block-image{
 	max-height: 10rem;
-	max-width: inherit;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -1173,19 +1172,6 @@ post-it: Column
 		min-height: 12rem;
 		padding: 2rem;
 	}
-
-	.post-it .wp-block-image{
-		max-height: 6rem;
-	}
-
-	.post-it h2{
-		font-size: 1.2rem;
-	}
-
-	.post-it p{
-		font-size: 1rem;
-	}
-
 }
 
 /* Phablet */
@@ -1209,6 +1195,14 @@ post-it: Column
 
 		.post-it .wp-block-image{
 			max-height: 8rem;
+		}
+
+		.post-it img{
+			object-fit: cover;
+		}
+
+		.post-it h2{
+			font-size: 1.6rem;
 		}
 
 	.wp-block-columns{
