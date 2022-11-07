@@ -23,7 +23,7 @@
 			<br>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'This theme, called %1$s was coded by me (Nia Hamilton!), with some help from %2$s!', 'colorful_edtech' ), 'colorful_edtech', '<a href="http://underscores.me/">Underscores</a>' );
+				printf( esc_html__( 'This theme, called %1$s, was coded by me (Nia Hamilton!) with some help from %2$s!', 'colorful_edtech' ), 'colorful_edtech', '<a href="http://underscores.me/">Underscores</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

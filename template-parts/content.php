@@ -17,20 +17,12 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				colorful_edtech_posted_on();
-				colorful_edtech_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+?>
 	</header><!-- .entry-header -->
 
 	<?php colorful_edtech_post_thumbnail(); ?>
-
+	<div class="cardboard-background">
+		<div class="blue-paper">
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -56,6 +48,9 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+
+</div>
+</div>
 
 	<footer class="entry-footer">
 		<?php colorful_edtech_entry_footer(); ?>

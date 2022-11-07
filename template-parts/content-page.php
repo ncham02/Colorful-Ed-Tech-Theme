@@ -41,7 +41,7 @@
 	</div><!-- .entry-content -->
 	<?php
 		if ( !is_front_page() ) :
-			?>			
+			?>
 		</div>
 </div>
 	<?php	endif; ?>
