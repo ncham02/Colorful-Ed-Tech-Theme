@@ -1148,9 +1148,27 @@ post-it: Column
 	text-align: left;
 	width: 90%;
 	background-color: #ADF9FC;
+	color: #000;
 	box-shadow: 6px 6px 10px #404040;
 	margin: auto;
 	padding: 2rem;
+}
+
+.blue-paper .wp-block-column{
+	align-self: center;
+	min-width: 22.6rem;
+}
+
+.blue-paper .polaroid{
+	max-width: 90%;
+}
+
+.blue-paper h1{
+	font-size: 2.4rem;
+}
+
+.blue-paper h2{
+	font-size: 2rem;
 }
 
 
