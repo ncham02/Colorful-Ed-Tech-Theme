@@ -1138,20 +1138,21 @@ post-it: Column
 
 .cardboard-background{
 	background-image: url(images/kiwihug-bPaRBSuvRPA-unsplash.jpg);
-	background-size: cover;
-	padding: 2rem;
+	background-size: contain;
+	padding: 4rem 2rem;
 	margin: 2rem 0;
 	box-shadow: 6px 6px 10px #404040;
 }
 
 .blue-paper{
+	position: relative;
 	text-align: left;
-	width: 90%;
+	width: 80%;
 	background-color: #ADF9FC;
 	color: #000;
 	box-shadow: 6px 6px 10px #404040;
 	margin: auto;
-	padding: 2rem;
+	padding: 2rem 4rem;
 }
 
 .blue-paper .wp-block-column{
@@ -1171,8 +1172,12 @@ post-it: Column
 	font-size: 2.4rem;
 }
 
-.blue-paper .wp-block-image :not(.polaroid) img{
+.blue-paper :not(.polaroid).wp-block-image img{
 	border: 2px dashed black;
+}
+
+.blue-paper .polaroid img,.blue-paper .polaroid figure img{
+	border: none;
 }
 
 .blue-paper blockquote.wp-block-quote{
@@ -1183,6 +1188,33 @@ post-it: Column
 .blue-paper figure.wp-block-pullquote blockquote{
 	border-top: 3px solid black;
 	border-bottom: 3px solid black;
+}
+
+.tape {
+	position: absolute;
+	z-index: 999;
+	width: 8rem;
+	height: 8rem;
+}
+
+.tape.top-right,.tape.bottom-right{
+	right: -48px;
+}
+
+.tape.top-left,.tape.bottom-left{
+	left: -48px;
+}
+
+.tape.bottom-left,.tape.bottom-right{
+	bottom:-48px;
+}
+
+.tape.top-left,.tape.top-right{
+	top:-48px;
+}
+
+.tape.top-left,.tape.bottom-right{
+	transform: rotate(90deg);
 }
 
 
@@ -1213,6 +1245,11 @@ post-it: Column
 
 	.hero-div{
 		flex-direction: column;
+	}
+
+	.cardboard-background{
+		padding: 4rem;
+		margin: 2rem 0;
 	}
 
 	.post-it{
@@ -1257,6 +1294,36 @@ post-it: Column
 		min-height: 20rem;
 		margin: auto 0;
 		transform: rotate(0);
+	}
+
+	.cardboard-background{
+		padding: 4rem 1rem;
+		margin: 2rem 0;
+	}
+
+	.blue-paper{
+		padding: 2rem;
+	}
+
+	.tape{
+		width: 4rem;
+		height: 4rem;
+	}
+
+	.tape.top-right,.tape.bottom-right{
+		right: -24px;
+	}
+
+	.tape.top-left,.tape.bottom-left{
+		left: -24px;
+	}
+
+	.tape.bottom-left,.tape.bottom-right{
+		bottom:-24px;
+	}
+
+	.tape.top-left,.tape.top-right{
+		top:-24px;
 	}
 
 }
