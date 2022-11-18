@@ -23,6 +23,11 @@
 	<?php colorful_edtech_post_thumbnail(); ?>
 	<div class="cardboard-background">
 		<div class="blue-paper">
+			<img class="tape top-left" src="<?php echo esc_url( get_template_directory_uri() . '/images/tape-png-44308.png' ); ?>" alt="">
+			<img class="tape top-right" src="<?php echo esc_url( get_template_directory_uri() . '/images/tape-png-44308.png' ); ?>" alt="">
+			<img class="tape bottom-left" src="<?php echo esc_url( get_template_directory_uri() . '/images/tape-png-44308.png' ); ?>" alt="">
+			<img class="tape bottom-right" src="<?php echo esc_url( get_template_directory_uri() . '/images/tape-png-44308.png' ); ?>" alt="">
+
 	<div class="entry-content">
 		<?php
 		the_content(
